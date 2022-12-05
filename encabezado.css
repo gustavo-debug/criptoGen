@@ -1,11 +1,15 @@
 ﻿* {
     --font_color: deepskyblue;
     --font_size: 20px;
-    --tam_icon: calc( var(--font_size)*1.5);
+    --tam_nav: 30px;
+    --tam_img_titulo: calc( var(--tam_nav)*3);
+    --tam_icon: calc( var(--tam_nav));
+    
     margin: 0px;
     padding: 0px;
 }
 body{
+    width:100%;
     display:flex;
     justify-content:center;
     font-size: var(--font_size);
@@ -16,9 +20,11 @@ body{
     display:block;
 }
 
-
+img{
+    margin:0px;
+    padding:0px;
+}
 header {
-    /*background-color:aliceblue;*/
     height: 83px;
     margin:0px;
     display:flex;
@@ -28,7 +34,21 @@ header {
 header a{
     text-decoration:none;
 }
+
+#box_img_titulo{
+    margin:0px;
+    padding:0px;
+    height: var(--tam_img_titulo); 
+}
+#box_img_titulo img{
+    margin:0px;
+    padding:0px;
+    height: var(--tam_img_titulo); 
+
+}
+
 #box_nav{
+    height: var(--tam_nav);
     display:flex;
 }
 #lista_navegacion {
@@ -51,7 +71,6 @@ header a{
     display: none;
 }
 #lista_navegacion li a{
-    box-sizing: border-box;
     font-size:1em;
     color: black;
 }
@@ -63,47 +82,62 @@ header a{
     line-height:0.97;
     color: black;
 }
-#box_img_titulo{
+
+
+#box_other_navegacion{
+    height: var(--tam_nav);
+    display:flex;
+    align-items:center;
 }
-#img_titulo{
-    width:250px;
-    
-}
-#icon_estrella{
-    width: var(--tam_icon);
-    height: var(--tam_icon);
+
+
+#box_Lista_de_seguimiento{
+    height: var(--tam_nav);
 }
 #box_Lista_de_seguimiento a{
+    height: var(--tam_nav);
+    margin:0px;
     padding:0px;
     display:flex;
     align-items:center;
 }
+#box_img_estrella{
+    height: var(--tam_nav);
+    margin:0px;
+    padding:0px;
+}
+
+#box_img_estrella img{
+    margin:0px;
+    padding:0px;
+    height: var(--tam_icon);
+}
+
 #box_Lista_de_seguimiento a p {
     padding: 0px 10px;
     box-sizing: border-box;
     color: var(--font_color);
 }
-box_Lista_de_seguimiento a:hover p{
-    color: black;
+#box_Lista_de_seguimiento a:hover{
+    background-color: aliceblue;
 }
-#box_buscador{
-    width: 250px;
-    height: auto;
 
+
+#box_buscador{
+    width: auto;
+    margin:0px;
+    padding:0px;
+    height: var(--tam_nav);
 }
+
 #input_buscador {
+    height: var(--tam_nav);
+    margin:0px;
+    padding:0px;
     text-align: center;
 }
-#box_other_navegacion{
-    display:flex;
-    align-items:center;
-}
-
-h3{
-    background-color:red;
-    padding: 0px 50px 0px 50px;
-
-    display:block;
-    width: 170px;
-    box-sizing: border-box;
+#boton_enviar{
+    height: var(--tam_nav);
+    margin:0px;
+    padding:0px;
 }

@@ -1,15 +1,14 @@
-﻿
+﻿*{
+    --height_encabezado_r: calc( var(--tam_img_titulo) + var(--tam_nav)  );
+    --color_fondo_desplegable_1350: olive;
+    --color_fondo_desplegable_550: var(--color_fondo_desplegable_1350);
+}
 @media screen and (max-width: 1875px) {
-    #box_buscador{
-        width:auto;
-    }
-    #input_buscador {
-    }
     #box_img_estrella{
         width: 30px;
         height: 30px;
     }
-    #icon_estrella{
+    #box_img_estrella img{
         width: 30px;
         height:30px;
     }
@@ -19,39 +18,50 @@
 }
 @media screen and (max-width: 1650px) {
     header{
+        height: var(--height_encabezado_r);
         display:block;
         text-align:center;
+    }
+    #box_img_titulo{
+        display:block;
+    }
+    #box_nav{
+        height: var(--tam_nav);
+        display:flex;
     }
 }
 @media screen and (max-width: 1350px) {
     header {
-        
+        height: var(--height_encabezado_r);
     }
     #box_nav{
-        float:left;
-    }
-    #box_menus {
-        display:inline-block;
+        display:flex;
+        justify-content: center;
     }
     #text_menu_navegacion {
+        height: var(--tam_nav);
+        line-height: var(--tam_nav);
         display: block;
     }
+    #menu_navegacion{
+        width: 30%;
+    }
     #lista_navegacion{
+        width:400px;  /*cambiar a 100% para moviles*/
+        margin:0px;
+        padding: 0px;
         text-align:left;
-        display:block;
+        display:none;
     }
     #lista_navegacion li{
-        width:100%;
+        background-color: var(--color_fondo_desplegable_1350);
+        width: 100%;
+        margin:0px;
+        padding:0px;
         padding-left:12px;
+        border:2px solid var(--color_fondo_desplegable_1350);
         box-sizing:border-box;
-        display:block;
-    }
-    #menu_navegacion{
-        width:200px;
-    }
-    #menu_navegacion ul{
         display:none;
-
     }
     #menu_navegacion:hover ul{
         display:block;
@@ -59,56 +69,30 @@
     }
     #menu_navegacion:hover ul li{
         display: block;
-        border:2px solid white;
+        box-sizing: border-box;
+        border:2px solid var(--color_fondo_desplegable_1350);
     }
     #menu_navegacion:hover ul li:hover{
-        width:250px;/*cambiar a 100% para moviles*/
+        width:100%;
         border-radius:5px;
         border:2px solid aliceblue;
-    }
-    #text_menu_navegacion{
-        height:40px;
-        line-height:40px;
-        align-items:center;
+        box-sizing: border-box;
 
     }
     #box_other_navegacion{
         width:auto;
     }
-    /*
-    #menu_navegacion{
-        width:150px;
-        display:block;
-    }
-    #box_menus:hover ul{
-        position:absolute;
-        
-        display:block;
-    }
-    #box_menus:hover ul li{
-        background-color:olive;
-        display:block;
-    }
-    #lista_navegacion{
-        
-        display:none;
-    }*/
+
+    
     #text_lista_de_seguimiento {
         display: block;
     }
     #box_buscador{
         display:flex;
     }
-    #input_buscador {
-        display: block;
-    }
 }
 @media screen and (max-width: 850px) {
     
-    
-    #box_buscador{
-        background-color:olive;
-    }
     #text_lista_de_seguimiento{
         display:none;
     }
@@ -119,6 +103,9 @@
     #cuerpo_ajustado{
         width:100%;
     }
+    header{
+        width:100%;
+    }
     #box_nav{
         width:100%;
     }
@@ -127,19 +114,26 @@
         box-sizing: border-box;
         justify-content: right;
     }
-    |
+    
     #menu_navegacion{
-        background-color: olive;
         width:40%;
-        height:54px;
+        height: var(--tam_nav);
+        
     }
     #text_menu_navegacion{
         width:100%;
+        padding-left:10px;
+        text-align: left;
+
     }
     #menu_navegacion:hover{
-        background-color:olive;
+        background-color: var(--color_fondo_desplegable_550);
         width:100%;
         position:absolute;
+        top:0px;
+    }
+    #menu_navegacion:hover p{
+        display:none;/*como salgo del menu sin hacerle click al texto_menu?*/
     }
     #menu_navegacion:hover ul{
         width:100%;
@@ -148,24 +142,22 @@
         list-style:none;
     }
     #menu_navegacion:hover ul li{
-        background-color: olive;
         width:100%;
         margin:0px;
-        border:0px solid white;
+        padding:0px;
+        padding-left:10px;
     }
     #menu_navegacion:hover ul li:hover{
-        background-color: olive;
         width:100%;
-        border:2px solid aliceblue;
     }
     #text_menu_navegacion:active{
         color:blueviolet;
     }
     #box_buscador{
-        margin-right:30px;
+        padding-right:30px;
+        box-sizing: border-box;
     }
     #input_buscador {
-        width: 150px;
         display: none;
     }
 }

@@ -23,7 +23,8 @@
 
 #articulos_nuevos a{
     text-decoration: none;
-    display:flex;
+    /*display:flex;*/
+    display:none;
     align-items: end;
 }
 #articulos_nuevos img{
@@ -43,6 +44,4 @@
 
 #articulos_nuevos article:hover{
     width:400px;
-    position:relative;
-    border:2px solid cadetblue;
 }
