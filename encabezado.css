@@ -13,6 +13,7 @@ body{
 }
 #cuerpo_ajustado{
     width:80%;
+    display:block;
 }
 
 
