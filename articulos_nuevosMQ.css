@@ -1,6 +1,39 @@
 @media screen and (max-width: 1650px) {
     #articulos_nuevos{
-        background-color:lightblue;
+        width:100%;
+    }
+    #articulos_nuevos article:nth-child(2){
+        padding:0px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    #articulos_nuevos{
+        --ancho_img: 700px;
+        width:100%;
         display:block;
+    }
+    #articulos_nuevos article:nth-child(2){
+        margin:0px;
+        padding:0px;
+    }
+    #articulos_nuevos article{
+        margin:0px;
+        padding:0px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    #articulos_nuevos article{
+        border: 0px solid var(--color_fondo);
+    }
+    #articulos_nuevos article:hover{
+        border: 0px solid var(--color_borde);
+    }
+    #articulos_nuevos img{
+        border: var(--tam_borde) solid var(--color_fondo);
+    }
+    #articulos_nuevos img:hover{
+        border: var(--tam_borde) solid var(--color_borde);
     }
 }
