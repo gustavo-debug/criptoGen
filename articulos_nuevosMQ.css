@@ -37,3 +37,9 @@
         border: var(--tam_borde) solid var(--color_borde);
     }
 }
+
+@media screen and (max-width: 850px){
+    #articulos_nuevos{
+        --ancho_img:100%;
+    }
+}

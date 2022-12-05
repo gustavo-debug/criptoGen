@@ -149,6 +149,7 @@
     }
     #menu_navegacion:hover ul li:hover{
         width:100%;
+        z-index: 100;
     }
     #text_menu_navegacion:active{
         color:blueviolet;
